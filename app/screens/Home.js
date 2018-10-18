@@ -10,7 +10,7 @@ import { ClearButton } from '../components/Buttons';
 const TEMP_BASE_TEXT = 'USD';
 const TEMP_QUOTE_TEXT = 'PND';
 const TEMP_BASE_PRICE = '100';
-const TEMP_QUOTE_PRICE = '70';
+const TEMP_QUOTE_PRICE = '79.74';
 
 export default class Home extends React.Component {
   handleTextChange = (text) => {
