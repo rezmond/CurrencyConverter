@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { View, Text, StatusBar } from 'react-native';
+import {
+  StatusBar,
+  KeyboardAvoidingView,
+} from 'react-native';
 
 import { Container } from '../components/Container';
 import { Logo } from '../components/Logo';
@@ -33,6 +36,7 @@ export default class Home extends React.Component {
     return (
       <Container>
         <StatusBar translucent={false} barStyle="default" />
+        <Header onPress={this.handleOptionsOpenPress} />
         <Logo />
         <KeyboardAvoidingView behavior="padding">
           <InputWithButton
