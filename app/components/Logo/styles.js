@@ -31,7 +31,6 @@ const styles = EStyleSheet.create({
     marginTop: 15,
     color: '$white',
   },
-  $outline: 1,
 });
 
 export default styles;
