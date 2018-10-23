@@ -1,15 +1,25 @@
 /* author: makarov */
 
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Text } from 'react-native';
+import {
+  Text,
+  FlatList,
+  View,
+  StatusBar,
+} from 'react-native';
+
+import styles from './styles';
+import currencies from '../data/currencies';
 
 export default function CurrencyList() {
   return (
-    <Text>
-    </Text>
+    <View style={[styles.header, { flex: 1 }]}>
+      <StatusBar barStyle="default" translycent={false} />
+      <FlatList
+        data={currencies}
+        renderItem={({ item }) => <Text key={item}>{item}</Text>}
+        keyExtractor={item => item}
+      />
+    </View>
   );
 }
-
-CurrencyList.propTypes = {
-};
