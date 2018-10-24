@@ -16,6 +16,7 @@ export default function ListItem({
   selected,
   checkmark = true,
   visible = true,
+  customIcon,
   onPress,
 }) {
   return (
@@ -35,6 +36,7 @@ export default function ListItem({
             />
           )
         }
+        {customIcon}
       </View>
     </TouchableHighlight>
   );
@@ -42,8 +44,9 @@ export default function ListItem({
 
 ListItem.propTypes = {
   text: PropTypes.string.isRequired,
-  selected: PropTypes.bool.isRequired,
-  checkmark: PropTypes.bool.isRequired,
-  visible: PropTypes.bool.isRequired,
+  selected: PropTypes.bool,
+  checkmark: PropTypes.bool,
+  visible: PropTypes.bool,
+  customIcon: PropTypes.element,
   onPress: PropTypes.func.isRequired,
 };
